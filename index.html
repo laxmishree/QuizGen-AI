@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>QuizGen AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+
+    <nav>
+
+        <!-- Logo -->
+
+        <div class="logo-area">
+
+            <div class="logo">
+                QuizGen <span>AI</span>
+            </div>
+
+            <small>
+                Smart Learning, Powered by AI
+            </small>
+
+        </div>
+
+
+        <!-- Navigation Links -->
+
+        <div class="nav-links">
+
+            <a href="javascript:void(0)"
+               onclick="showHome()">
+                Home
+            </a>
+
+            <a href="javascript:void(0)"
+               onclick="showHomeAndFeatures()">
+                Features
+            </a>
+
+            <a href="javascript:void(0)"
+               onclick="showCreatePage()">
+                Create Quiz
+            </a>
+
+            <a href="javascript:void(0)"
+               onclick="showDashboard()">
+                Dashboard
+            </a>
+
+            <a href="javascript:void(0)"
+               onclick="showHistory()">
+                History
+            </a>
+            <a href="javascript:void(0)" onclick="showDailyChallenge()">Daily Challenge</a>
+
+        </div>
+
+    </nav>
+
+
+
+   
+
+    <div class="creative-background">
+
+
+        <!-- Floating Book - Left -->
+
+        <div class="floating-book book-left">
+
+            <div class="book-cover"></div>
+
+            <div class="book-page"></div>
+
+        </div>
+
+
+
+        <!-- Floating Book - Right -->
+
+        <div class="floating-book book-right">
+
+            <div class="book-cover"></div>
+
+            <div class="book-page"></div>
+
+        </div>
+
+
+
+        <!-- Light Bulb -->
+
+        <div class="lightbulb">
+
+            <div class="bulb-glass"></div>
+
+            <div class="bulb-base"></div>
+
+            <span class="bulb-ray ray-1"></span>
+
+            <span class="bulb-ray ray-2"></span>
+
+            <span class="bulb-ray ray-3"></span>
+
+            <span class="bulb-ray ray-4"></span>
+
+        </div>
+
+
+
+        <!-- AI Robot -->
+
+        <div class="ai-robot">
+
+            <div class="robot-antenna"></div>
+
+
+            <div class="robot-head">
+
+                <div class="robot-face">
+
+                    <span class="robot-eye"></span>
+
+                    <span class="robot-eye"></span>
+
+                    <span class="robot-smile"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="robot-body">
+
+                <div class="robot-book"></div>
+
+            </div>
+
+
+            <div class="robot-arm left-arm"></div>
+
+            <div class="robot-arm right-arm"></div>
+
+        </div>
+
+
+
+        <!-- Sparkles -->
+
+        <div class="sparkle sparkle-1">
+            ✦
+        </div>
+
+        <div class="sparkle sparkle-2">
+            ✧
+        </div>
+
+        <div class="sparkle sparkle-3">
+            ✦
+        </div>
+
+        <div class="sparkle sparkle-4">
+            ✧
+        </div>
+
+
+    </div>
+
+
+
+    <section id="home"
+             class="hero">
+
+
+        <div class="hero-content">
+
+
+            <!-- Big Brand -->
+
+            <div class="hero-brand">
+
+                QuizGen <span>AI</span>
+
+            </div>
+
+
+
+            <!-- Tagline -->
+
+            <div class="hero-tagline">
+
+                LEARN &nbsp; ✦ &nbsp; PRACTICE &nbsp; ✦ &nbsp; EXCEL
+
+            </div>
+
+
+
+            <!-- Main Heading -->
+
+            <h1>
+
+                Turn Your Notes Into
+
+                <span>
+                    Smart Quizzes
+                </span>
+
+                With AI
+
+            </h1>
+
+
+
+            <!-- Description -->
+
+            <p>
+
+                Transform your study material into
+                personalized quizzes, answers,
+                and explanations using Generative AI.
+
+            </p>
+
+
+
+            <!-- Main Button -->
+
+            <button onclick="showCreatePage()">
+
+                Create My Quiz
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+    <section id="features"
+             class="features">
+
+
+        <h2>
+            Why QuizGen AI?
+        </h2>
+
+
+
+        <div class="feature-container">
+
+
+            <!-- Feature 1 -->
+
+            <div class="feature-card">
+
+                <h3>
+                    🤖 AI Generated
+                </h3>
+
+                <p>
+                    Generate questions automatically
+                    from your study material.
+                </p>
+
+            </div>
+
+
+
+            <!-- Feature 2 -->
+
+            <div class="feature-card">
+
+                <h3>
+                    🎯 Personalized
+                </h3>
+
+                <p>
+                    Choose the number, difficulty,
+                    and type of questions.
+                </p>
+
+            </div>
+
+
+
+            <!-- Feature 3 -->
+
+            <div class="feature-card">
+
+                <h3>
+                    💡 Explanations
+                </h3>
+
+                <p>
+                    Get answers with simple explanations
+                    to understand better.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <section id="create"
+             class="create-section">
+
+
+        <div class="quiz-box">
+
+
+            <h2>
+                Create Your Quiz
+            </h2>
+
+
+            <p>
+                Enter your study material below.
+            </p>
+
+
+
+            <!-- Upload Area -->
+
+            <div class="upload-area">
+
+
+                <h3>
+                    📄 Upload Study Material
+                </h3>
+
+
+                <p>
+                    Upload a PDF, DOCX, TXT,
+                    or Image (PNG/JPG/JPEG)
+                </p>
+
+
+                <input
+                    type="file"
+                    id="studyDocument"
+                    accept=".pdf,.docx,.txt,.png,.jpg,.jpeg"
+                >
+
+
+                <p id="fileName"></p>
+
+
+            </div>
+
+
+
+            <!-- OR -->
+
+            <div class="or-divider">
+                OR
+            </div>
+
+
+
+            <!-- Paste Notes -->
+
+            <textarea
+                id="studyMaterial"
+                placeholder="Paste your study notes here..."
+            ></textarea>
+
+
+
+            <!-- Number of Questions -->
+
+            <label>
+                Number of Questions
+            </label>
+
+
+            <select id="questionNumber">
+
+                <option value="5">
+                    5 Questions
+                </option>
+
+                <option value="10">
+                    10 Questions
+                </option>
+
+                <option value="15">
+                    15 Questions
+                </option>
+
+            </select>
+
+
+
+            <!-- Difficulty -->
+
+            <label>
+                Difficulty
+            </label>
+
+
+            <select id="difficulty">
+
+                <option value="Easy">
+                    Easy
+                </option>
+
+                <option value="Medium">
+                    Medium
+                </option>
+
+                <option value="Hard">
+                    Hard
+                </option>
+
+            </select>
+
+
+
+            <!-- Question Type -->
+
+            <label>
+                Question Type
+            </label>
+
+
+            <select id="questionType">
+
+                <option value="MCQ">
+                    Multiple Choice Questions
+                </option>
+
+                <option value="True/False">
+                    True / False
+                </option>
+
+                <option value="Short Answer">
+                    Short Answer
+                </option>
+
+            </select>
+
+
+
+            <!-- Generate Quiz -->
+
+            <button onclick="generateQuiz()">
+
+                Generate Quiz 🤖
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+   
+
+    <section id="quizResult"
+             class="quiz-result">
+
+
+        <h2>
+            Your AI Generated Quiz 🎯
+        </h2>
+
+
+        <div id="quizContent"></div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUIZ HISTORY SECTION
+         ===================================================== -->
+
+    <section id="history"
+             class="quiz-result">
+
+
+        <h2>
+            Quiz History
+        </h2>
+
+
+        <div id="historyContent">
+
+            <p>
+                No quizzes attempted yet.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DASHBOARD SECTION
+         ===================================================== -->
+
+    <section id="dashboard"
+             class="dashboard-section">
+
+
+        <div class="dashboard-container">
+
+
+            <h2>
+                Performance Dashboard
+            </h2>
+
+
+            <p class="dashboard-subtitle">
+
+                Track your quiz performance
+                and learning progress.
+
+            </p>
+
+
+
+            <!-- Dashboard Cards -->
+
+            <div class="dashboard-cards">
+
+
+                <!-- Total Quizzes -->
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        Total Quizzes
+                    </h3>
+
+                    <div id="totalQuizzes">
+                        0
+                    </div>
+
+                </div>
+
+
+
+                <!-- Average Score -->
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        Average Score
+                    </h3>
+
+                    <div id="averageScore">
+                        0%
+                    </div>
+
+                </div>
+
+
+
+                <!-- Questions Attempted -->
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        Questions Attempted
+                    </h3>
+
+                    <div id="questionsAttempted">
+                        0
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Recent Performance -->
+
+            <div class="recent-performance">
+
+
+                <h3>
+                    Recent Performance
+                </h3>
+
+
+                <div id="performanceList">
+
+                    <p>
+                        No quiz attempts yet.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Back to Home -->
+
+            <button
+                class="back-to-quiz"
+                onclick="showHome()"
+            >
+
+                Back to Home
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+<section id="dailyChallengePage" class="daily-challenge-page">
+
+    <div class="daily-challenge-container">
+
+        <div class="daily-challenge-header">
+            <span>✦ DAILY CHALLENGE ✦</span>
+
+            <h2>Challenge Yourself Today</h2>
+
+            <p>
+                Customize your challenge and test your knowledge.
+            </p>
+        </div>
+
+        <div id="dailyChallengeContent">
+
+            <div class="daily-welcome-card">
+
+                <div class="daily-icon">
+                    🧠
+                </div>
+
+                <h3>Ready for Today's Challenge?</h3>
+
+                <p>
+                    Choose your preferences and let AI create your challenge.
+                </p>
+
+                <div class="daily-options">
+
+                    <div class="daily-option">
+                        <label for="dailyTopic">Topic</label>
+
+                        <select id="dailyTopic">
+                            <option value="Random">🎲 Random Topic</option>
+                            <option value="Data Structures">Data Structures</option>
+                            <option value="DBMS">DBMS</option>
+                            <option value="Operating Systems">Operating Systems</option>
+                            <option value="Computer Organization">Computer Organization</option>
+                            <option value="Java Programming">Java Programming</option>
+                            <option value="Digital Electronics">Digital Electronics</option>
+                            <option value="Python Programming">Python Programming</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Artificial Intelligence">Artificial Intelligence</option>
+                            <option value="General Knowledge">General Knowledge</option>
+                            <option value="Aptitude & Reasoning">Aptitude & Reasoning</option>
+                        </select>
+                    </div>
+
+                    <div class="daily-option">
+                        <label for="dailyDifficulty">Difficulty</label>
+
+                        <select id="dailyDifficulty">
+                            <option value="Easy">Easy</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+
+                    <div class="daily-option">
+                        <label for="dailyQuestionNumber">Questions</label>
+
+                        <select id="dailyQuestionNumber">
+                            <option value="5" selected>5 Questions</option>
+                            <option value="10">10 Questions</option>
+                            <option value="15">15 Questions</option>
+                        </select>
+                    </div>
+
+                    <div class="daily-option">
+                        <label for="dailyQuestionType">Question Type</label>
+
+                        <select id="dailyQuestionType">
+                            <option value="MCQ" selected>Multiple Choice</option>
+                            <option value="True/False">True / False</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button onclick="startDailyChallenge()">
+                    Start Challenge
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</section>
+    <script
+        src="{{ url_for('static', filename='js/script.js') }}?v=2">
+    </script>
+
+
+</body>
+
+</html>
